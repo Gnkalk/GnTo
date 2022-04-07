@@ -1,0 +1,68 @@
+:root {
+    --primary-color: #bbca75;
+    --secondary-color: #acbd61;
+}
+.sidebar {
+    flex: 3;
+    background-color: var(--bg-secondary-color);
+}
+.content {
+    flex: 7;
+    height: 100vh;
+    overflow: auto;
+}
+.st-pad {
+    padding: 1em;
+}
+div#input {
+    padding: 5px;
+}
+#description {
+    min-height: 150px;
+}
+#submit {
+    max-width: 86px;
+}
+.card {
+    background-color: var(--bg-secondary-color);
+    border-radius: 10px;
+    padding: 15px;
+    margin: .3em;
+    position: relative
+}
+.card p {
+    max-height: 250px;
+    overflow-y: auto;
+}
+@media screen and (min-width: 965px) {
+    form {
+        padding: 2em;
+    }
+    .card {
+        width: calc(100% / 3.15);
+        height: fit-content;
+        
+    }
+}
+
+button[theme="inline"], button[theme="outline"]{
+    flex: 50%;
+}
+button[theme="outline"] {
+    --color:red;
+    margin-right: 8px;
+}
+
+.complate {
+    opacity: 0.3;
+}
+.complate::before {
+    content: "✔";
+    color: green;
+    font-size: 5em;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
