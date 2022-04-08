@@ -78,7 +78,7 @@ button[theme="outline"] {
 }
 #loading::before {
     content: "";
-    position: absolute;
+    position: fixed;
     z-index: 6;
     height: 1%;
 }
