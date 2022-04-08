@@ -91,7 +91,11 @@ function addTodo(){
     }
 
     const todoStore = request.objectStore("todo_list");
-    todoStore.add(todo);
+    if (todo.title || todo.description){
+        todoStore.add(todo);
+    } else {
+        window.location = '#error';
+    }
 
     document.getElementById("title").value = "";
     document.getElementById("description").value = "";
