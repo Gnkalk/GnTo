@@ -14,6 +14,12 @@
 .st-pad {
     padding: 1em;
 }
+.st-br {
+    margin-bottom: 1.5em;
+}
+.sm-br {
+    margin-bottom: .5em;
+}
 div#input {
     padding: 5px;
 }

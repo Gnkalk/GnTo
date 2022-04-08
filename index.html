@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/godratmand-ui@1.1.0/build/GodUi.rtl.min.css">
     <link rel="stylesheet" href="./src/style.css">
-    <title>GnTo</title>
+    <link rel="shortcut icon" href="https://icongr.am/material/checkbox-marked-circle-outline.svg?size=50&color=c53c02" type="image/x-icon">
+    <title>GnTo 〈 جَنتو 〉</title>
+    <meta name="description" content="Gnkalk Todo | جنگالک تودو">
+    <meta name="keywords" content="Todo Gnkalk جنگالک تودو">
 </head>
 <body><shaft d-flex d-block-mobile value="h:100vh">
     <div id="loading" class="position-fixed"></div>
-    <div class="st-pad sidebar">
+    <div class="st-pad sidebar" d-flex flex-dir-column>
         <br>
-        <h2 align-center>جَنتو</h2>
-        <br>
-        <div d-flex flex-dir-column id="input">
-            <input type="text" placeholder="عنوان" id="title">
-            <br>
-            <textarea placeholder="متن" id="description"></textarea>
-            <br>
+        <h2 align-center class="sm-br">جَنتو</h2>
+        <div d-flex flex-dir-column id="input" class="st-br">
+            <input type="text" placeholder="عنوان" id="title" class="st-br">
+            <textarea placeholder="متن" id="description" class="st-br"></textarea>
             <button theme="shadow" style="border-color: grey;" id="submit">ثبت</button>
         </div>
+        <a href="https://github.com/Gnkalk/Gnto" target="_blank" class="github" d-none-mobile center><img src="https://icongr.am/devicon/github-original-wordmark.svg?size=65&color=currentColor" alt="Github"></a>
     </div>
     <div class="st-pad content" d-flex d-block-mobile flex-wrap-wrap align-content-flex-start></div>
     <alert id="error">
