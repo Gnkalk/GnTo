@@ -1,5 +1,6 @@
 const Submitbtn = document.getElementById("submit");
 const Content = document.getElementsByClassName("content");
+const loader = document.querySelector("#loading");
 
 let db = null;
 
@@ -49,6 +50,8 @@ function deleteTodo(id){
 }
 
 function viewTodo(){
+    loading();
+
     const todolist = db.transaction("todo_list", "readonly").objectStore("todo_list");
     
     const request = todolist.openCursor();
@@ -123,4 +126,11 @@ function CreateDB(){
         console.error(`error: ${e.target.error} was found `);
     }
 
+}
+
+function loading(){
+    loader.classList.add("active");
+    setTimeout(() => {
+        loader.classList.remove("active");
+    }, 1500);
 }
