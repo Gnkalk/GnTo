@@ -96,15 +96,15 @@ function addTodo(){
     const todoStore = request.objectStore("todo_list");
     if (todo.title || todo.description){
         todoStore.add(todo);
+        document.getElementById("title").value = "";
+        document.getElementById("description").value = "";
+    
+        Content[0].innerHTML = "";
+        viewTodo();
     } else {
-        window.location = '#error';
+        alerterror();
     }
 
-    document.getElementById("title").value = "";
-    document.getElementById("description").value = "";
-
-    Content[0].innerHTML = "";
-    viewTodo();
 }
 
 function CreateDB(){
@@ -133,4 +133,8 @@ function loading(){
     setTimeout(() => {
         loader.classList.remove("active");
     }, 1500);
+}
+
+function alerterror(){
+    document.querySelector("#error").toggleAttribute("active");
 }
